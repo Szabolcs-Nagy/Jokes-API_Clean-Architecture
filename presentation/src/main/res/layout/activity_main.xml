@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:openDrawer="right">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+
+        app:headerLayout="@layout/header_navigation"
+        android:layout_gravity="right">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dimen_200dp"
+            android:padding="@dimen/dimen_32dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Switch
+                android:id="@+id/explicit_swicth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="@string/hide_explicit_category_switch" />
+            <TextView
+                android:layout_below="@+id/explicit_swicth"
+                android:id="@+id/number_jokes_texview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_32dp"
+                android:text="@string/number_of_jokes_textview"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/num_jokes_containter_cardview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/number_jokes_texview"
+                android:background="@android:color/white"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="2dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="8dp">
+
+
+                    <EditText
+                        android:id="@+id/num_jokes_id_edittext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+
+                        android:layout_marginTop="52dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/type_a_num_jokes_edittext"
+                        android:inputType="number"
+                        android:maxLines="1" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/filter_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimary"
+                android:text="@string/filter_text_button"
+                android:textColor="@android:color/white"
+                android:textSize="24sp" />
+
+
+
+        </RelativeLayout>
+
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

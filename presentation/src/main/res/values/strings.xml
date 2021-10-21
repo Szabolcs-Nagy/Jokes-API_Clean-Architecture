@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CrazyJokes</string>
+    <string name="type_a_num_jokes_edittext">Number of jokes</string>
+    <string name="error_request_msg_toast">Something was wrong </string>
+    <string name="request_success_msg">SUCCESS :)</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="filter_text_button">Filter</string>
+    <string name="error_num_jokes_not_empty">Num jokes can not be empty</string>
+    <string name="number_of_jokes_textview">Number of jokes</string>
+    <string name="filter_header_texview">Filter</string>
+    <string name="hide_explicit_category_switch">Hide explicit category?</string>
+</resources>
